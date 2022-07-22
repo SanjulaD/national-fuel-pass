@@ -1,26 +1,26 @@
 import React from 'react';
+import Footer from './components/footer';
+
 function App() {
   return (
     <>
       <section className="flex items-center relative h-screen w-screen bg-yellow-100">
-        <div class="p-4 w-full text-center sm:p-8 0">
-          <div class="mb-2 font-bold text-red-100" style={{ fontSize: '92px' }}>
+        <div class="p-4 w-full text-center sm:p-8">
+          <div class="mb-2 font-bold text-red-100 lg:text-9xl md:text-9xl sm:text-6xl xl:text-9xl 2xl:text-9xl">
             NATIONAL FUEL PASS
           </div>
-          <div
-            class="mb-5 text-black sm:text-lg font-semibold"
-            style={{ fontSize: '48px' }}
-          >
+          <div className="mb-5 text-black sm:text-xl font-semibold md:text-4xl xl:text-6xl 2xl:text-6xl">
             Upload your QR here
           </div>
           <button
             type="button"
-            class="mt-5 text-black bg-orange-100 hover:bg-orange-200 font-medium rounded-2xl px-12 py-3.5 text-center "
+            className="mt-5 text-black bg-orange-100 hover:bg-orange-200 font-medium rounded-2xl px-12 py-3.5 text-center "
           >
             Click
           </button>
         </div>
       </section>
+      <Footer />
     </>
   );
 }
