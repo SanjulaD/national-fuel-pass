@@ -5,17 +5,17 @@ import LinkedinIcon from '@mui/icons-material/LinkedIn';
 
 function Footer() {
   return (
-    <footer class="absolute inset-x-0 bottom-0 md:p-6 w-screen mb-4">
-      <div class="grid justify-items-center">
+    <footer className="absolute inset-x-0 bottom-0 md:p-6 w-screen mb-4">
+      <div className="grid justify-items-center">
         <div className="hidden"></div>
-        <div class="text-sm text-black sm:text-center text-center items-center">
+        <div className="text-sm text-black sm:text-center text-center items-center">
           © 2022 by sanjula de alwis
         </div>
         <div className="hidden"></div>
       </div>
-      <div class="grid justify-items-center mt-3">
+      <div className="grid justify-items-center mt-3">
         <div className="hidden"></div>
-        <div class="text-sm text-black text-center items-center">
+        <div className="text-sm text-black text-center items-center">
           <a
             href="https://www.facebook.com/sanjula.dealwis"
             target="_blank"
