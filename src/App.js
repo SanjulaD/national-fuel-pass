@@ -5,8 +5,8 @@ function App() {
   return (
     <>
       <section className="flex items-center relative h-screen w-screen bg-yellow-100">
-        <div class="p-4 w-full text-center sm:p-8">
-          <div class="mb-2 font-bold text-red-100 lg:text-9xl md:text-9xl sm:text-6xl xl:text-9xl 2xl:text-9xl">
+        <div className="p-4 w-full text-center sm:p-8">
+          <div className="mb-2 font-bold text-red-100 lg:text-9xl md:text-9xl sm:text-6xl xl:text-9xl 2xl:text-9xl">
             NATIONAL FUEL PASS
           </div>
           <div className="mb-5 text-black sm:text-xl font-semibold md:text-4xl xl:text-6xl 2xl:text-6xl">
