@@ -1,59 +1,27 @@
-import React, { Component } from 'react';
-import jsPDF from 'jspdf';
-import './App.css';
-export class App extends Component {
-  state = {
-    profileImg:
-      'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png',
-  };
-  imageHandler = (e) => {
-    const reader = new FileReader();
-    reader.onload = () => {
-      if (reader.readyState === 2) {
-        this.setState({ profileImg: reader.result });
-      }
-    };
-    reader.readAsDataURL(e.target.files[0]);
-  };
-
-  generatePDF = () => {
-    var doc = new jsPDF('p', 'pt');
-
-    doc.setFontSize(40);
-    doc.text(100, 60, 'National Fuel Pass');
-    doc.addFont('helvetica', 'normal');
-    doc.save('demo.pdf');
-  };
-  render() {
-    const { profileImg } = this.state;
-    return (
-      <div className="page">
-        <div className="container">
-          <h1 className="heading">Add your Image</h1>
-          <div className="img-holder">
-            <img src={profileImg} alt="" id="img" className="img" />
+import React from 'react';
+function App() {
+  return (
+    <>
+      <section className="flex items-center relative h-screen w-screen bg-yellow-100">
+        <div class="p-4 w-full text-center sm:p-8 0">
+          <div class="mb-2 font-bold text-red-100" style={{ fontSize: '92px' }}>
+            NATIONAL FUEL PASS
           </div>
-          <input
-            type="file"
-            accept="image/*"
-            name="image-upload"
-            id="input"
-            onChange={this.imageHandler}
-          />
-          <div className="label">
-            <label className="image-upload" htmlFor="input">
-              Choose your Photo
-            </label>
+          <div
+            class="mb-5 text-black sm:text-lg font-semibold"
+            style={{ fontSize: '48px' }}
+          >
+            Upload your QR here
           </div>
-          <div>
-            <button onClick={this.generatePDF} type="primary">
-              Download PDF
-            </button>
-          </div>
+          <button
+            type="button"
+            class="mt-5 text-black bg-orange-100 hover:bg-orange-200 font-medium rounded-2xl px-12 py-3.5 text-center "
+          >
+            Click
+          </button>
         </div>
-      </div>
-    );
-  }
+      </section>
+    </>
+  );
 }
-
 export default App;
